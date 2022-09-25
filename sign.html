@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Login</title>
+   <link rel="stylesheet" href="sign.css">
+  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
+
+</head>
+
+<body>
+	<nav class="navbar">
+		<!-- LOGO -->
+		<div class="logo">KERALA</div>
+		<!-- NAVIGATION MENU -->
+		<ul class="nav-links">
+		  <!-- USING CHECKBOX HACK -->
+		 <!-- <input type="checkbox" id="checkbox_toggle" />
+		  <label for="checkbox_toggle" class="hamburger">&#9776;</label>-->
+		  <!-- NAVIGATION MENUS -->
+		  <div class="menu">
+			<ul class="navbar-nav ml-auto"></ul>
+			<li><a href="index.html" >Home</a></li>
+			<li><a href="/">Discover</a></li>
+			<li class="services">
+			  <a href="/">Services</a>
+			  <!-- DROPDOWN MENU -->
+			  <ul class="dropdown">
+				<!--<li><a href="/">Dropdown 1 </a></li>
+				<li><a href="/">Dropdown 2</a></li>
+				<li><a href="/">Dropdown 2</a></li>
+				<li><a href="/">Dropdown 3</a></li>
+				<li><a href="/">Dropdown 4</a></li>-->
+			  </ul>
+			</li>
+			<li><a href="/">Experience</a></li>
+			<li><a href="/">About Us</a></li>
+		  </div>
+		</ul>
+	</ul>
+	  </nav>
+
+
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Create Account</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your email for registration</span>
+			<input type="text" placeholder="Name" />
+			<input type="email" placeholder="Email" />
+			<input type="text" placeholder="9854326197" pattern="^[1-9]\d{2}-\d{3}-\d{4}|^[1-9]\d{2}\.\d{3}\.\d{4}|^\d{10}$"/>
+			<!--<label for="psw">Password</label>
+			<input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+		</div> -->
+		<input type="password" placeholder="Password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
+		  <div id="message"style="margin:2vh 5vh; width: 420px;" >
+			<p>Password must contain the following:</p>
+		<ol>
+			<li id="letter" class="invalid">lowercaseletter</li>
+			<li id="capital" class="invalid">capital (uppercase)letter</li>
+			<li id="number" class="invalid">number</li>
+			<li id="length" class="invalid">Minimum 8 characters</li>
+		</ol>
+		
+		</div>
+			
+			<button>Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Sign in</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your account</span>
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
+			<a href="#">Forgot your password?</a>
+			<button>Sign In</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal details</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hi There!</h1>
+				<p>Enter your personal details to open an account with us</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+<SCRIPT>
+var myInput = document.getElementById("psw");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+
+// When the user clicks on the password field, show the message box
+myInput.onfocus = function() {
+  document.getElementById("message").style.display = "block";
+}
+
+// When the user clicks outside of the password field, hide the message box
+myInput.onblur = function() {
+  document.getElementById("message").style.display = "none";
+}
+
+// When the user starts to type something inside the password field
+myInput.onkeyup = function() {
+  // Validate lowercase letters
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) {
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+}
+
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) {
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+
+  // Validate length
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+}
+</script>
+<script src="script.js" charset="utf-8"></script>
+</body>
+
+</html>

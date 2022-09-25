@@ -1,0 +1,197 @@
+*{
+    margin: 0px;
+    padding: 0PX;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .navbar-brand{
+      float: left;
+      margin-left: 20px;
+      cursor: pointer;
+  }
+  .logo{
+      color: white;
+      font-weight: bold;
+      font-size: 30px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      line-height: 60px;
+      text-shadow: 0 0 5px white;
+  }
+    .menu-bar{
+        background:linear-gradient(-90deg,#233329,#63d471);
+    }
+    .nav-link{
+        font-size: 16px;
+        margin: 3px;
+        color: #fff!important;
+        font-weight: 500;
+    }
+    .navbar-nav{
+        text-align: right;
+        margin-right: 20px;
+    }
+    .menu-bar .nav-toggler{
+        padding-right: 20px;
+        outline: none! important;
+        border: none!important;
+    }
+    .navbar.fa{
+        color: #fff;
+        font-size: 26px;
+    }
+    .nav-link:hover{
+        font-weight: 600;
+        border-bottom: 1px solid #fff;
+    }
+    img{
+        width: 100%;
+        height: 13rem;
+    }
+    .heading{
+        border: solid red;
+        width: 100%;
+        height: 110px;
+        background-color:#fdcd8a;
+         border-radius: 7px;
+         padding: 10px;
+         backdrop-filter: blur(30px);
+         border: 2px solid transparent;
+         background-clip: padding-box;
+    }
+    #KANNUR{
+        background-color: #f0fff3;
+        padding: 30PX 0px;
+    }
+    #KANNUR h1{
+        font-weight: 500;
+        font-size: 34px;
+        padding-bottom: 5px;
+    }
+    .title{
+        text-align: center;
+        padding: 25px 0px;
+    }
+    .title p{
+        font-size: 18px;
+    }
+    .card-body{
+    box-shadow: 0 0 20px 7px rgba(0,0,0,0.1);
+       
+    }
+    .card{
+        margin: 20px 10px;
+    }
+    .card-body a{
+        color: #0c7f90;
+        text-decoration: none;
+        font-size: 15px;
+        margin-top: auto;font-weight: 600;
+    }
+    .colmd-4{
+        border: solid red;
+        overflow: hidden;
+        box-shadow: 0 3rem 6rem rgba(0,0,0,0.1);
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    .col-md-4:hover{
+        transform: translateY(-0.5%);
+        box-shadow: 0 4rem 8rem rgba(0,0,0,0.5);
+    }
+    .map-area{
+       /* border: solid red;*/
+        display: flex;
+        align-items:center;
+        padding-left:370px;
+        margin-top: 75px;
+        margin-bottom: 75px;
+    }
+    .footer-dark {
+        padding: 50px 0;
+        color: #f0f9ff;
+        background-color: #282d32;
+      }
+      
+      .footer-dark h3 {
+        margin-top: 0;
+        margin-bottom: 12px;
+        font-weight: bold;
+        font-size: 16px;
+      }
+      
+      .footer-dark ul {
+        padding: 0;
+        list-style: none;
+        line-height: 1.6;
+        font-size: 14px;
+        margin-bottom: 0;
+      }
+      
+      .footer-dark ul a {
+        color: inherit;
+        text-decoration: none;
+        opacity: 0.6;
+      }
+      
+      .footer-dark ul a:hover {
+        opacity: 0.8;
+      }
+      
+      @media (max-width:767px) {
+        .footer-dark .item:not(.social) {
+          text-align: center;
+          padding-bottom: 20px;
+        }
+      }
+      
+      .footer-dark .item.text {
+        margin-bottom: 36px;
+      }
+      
+      @media (max-width:767px) {
+        .footer-dark .item.text {
+          margin-bottom: 0;
+        }
+      }
+      
+      .footer-dark .item.text p {
+        opacity: 0.6;
+        margin-bottom: 0;
+      }
+      
+      .footer-dark .item.social {
+        text-align: center;
+      }
+      
+      @media (max-width:991px) {
+        .footer-dark .item.social {
+          text-align: center;
+          margin-top: 20px;
+        }
+      }
+      
+      .footer-dark .item.social > a {
+        font-size: 20px;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 50%;
+        box-shadow: 0 0 0 1px rgba(255,255,255,0.4);
+        margin: 0 8px;
+        color: #fff;
+        opacity: 0.75;
+      }
+      
+      .footer-dark .item.social > a:hover {
+        opacity: 0.9;
+      }
+      
+      .footer-dark .copyright {
+        text-align: center;
+        padding-top: 24px;
+        opacity: 0.3;
+        font-size: 13px;
+        margin-bottom: 0;
+      }
